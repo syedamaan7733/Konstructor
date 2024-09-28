@@ -1,4 +1,343 @@
+/* header */
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    position: sticky;
+    z-index: 2;
+    top: -5px;
+    background-color: white;
+    animation-timeline: scroll();
+    border-bottom: 1px solid rgba(21, 21, 21, 0.404);
+}
+
+nav>div>a{
+    text-decoration: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-left: 2.6rem;
+    color: black;
+}
+
+nav a>i{
+    color: black;
+    margin-left: 5px;
+}
+
+nav>#button{
+    width: 12vw;
+    background-color: rgb(255, 94, 21);
+    text-align: center;
+    border: none;
+}
+
+nav>#button>h3{
+    color: rgba(255, 255, 255, 0.986);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    border: none;
+}
+
+#sec1{
+    background-color: #16232b;
+    overflow: hidden;
+    height: 130vh;
+}
+
+#sec1>h2{
+    color: white;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    top: -12rem;
+}
+
+#sec1>h1{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+    letter-spacing: -0.35px;
+    line-height: 45px;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    position: relative;
+    top: -13rem;
+}
+
+#red::after{
+    content: ' Construction';
+    color: orangered;
+}
+
+#button1{
+    width: 12vw;
+    padding: 0.1em;
+    background-color: rgb(255, 94, 21);
+    text-align: center;
+    border: none;
+    position: relative;
+    margin: auto;
+    top: -14rem;
+}
+
+#button1>h3{
+    color: rgba(255, 255, 255, 0.986);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    border: none;
+}
+
+#button1>h3:hover{
+    transition: transform 0.1s ease-out;
+    transform: translateX(20px);
+
+}
+
+#sec1>img:first-child{
+    transform: scale(0.9);
+    position: relative;
+    top: 8rem;
+    left: -6rem;
+}
+
+#sec1>img:nth-child(2){
+    transform: scale(0.9);
+    position: relative;
+    top: 11rem;
+    right: -49rem;
+}
+
+#sec1>img:nth-child(7){
+    transform: scale(0.9);
+    position: relative;
+    bottom: 14rem;
+    left: 6rem;
+    z-index: 1;
+}
+
+#sec1>img:nth-child(8){
+    transform: scale(0.8);
+    position: relative;
+    bottom: 34rem;
+    left: 6rem;
+    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+}
+
+#sec1>img:nth-child(9){
+    transform: scale(0.9);
+    position: relative;
+    top: -74rem;
+    right: -96rem;
+}
+
+@keyframes images {
+    from{
+        transform: scale(0.6);
+        opacity: 0;
+
+    }
+    to{
+        transform: scale(0.9);
+        opacity: 1;
+    }
+}
+
+#sec1>img:nth-child(1), #sec1>img:nth-child(2), #sec1>img:nth-child(7), #sec1>img:nth-child(9){
+    animation: images 0.6s ease-out;
+}
+
+@keyframes upper {
+    from{
+        transform: translateY(200px) scale(0.6);
+        opacity: 0;
+        
+        
+    }
+    to{
+        transform: translateY(0) scale(0.7);
+        opacity: 1;
+    }
+}
+
+#sec1>img:nth-child(8){
+    animation: upper forwards .6s ease-in-out;
+}
+
+@keyframes uppertext {
+    from{
+        transform: translateY(200px);
+        opacity: 0;
+        
+        
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#sec1>h1, #sec1>h2, #sec1>#button1{
+    animation: uppertext forwards .6s ease-in-out;
+}
+
+@keyframes buttonh {
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+        
+    }
+
+    25%{
+        opacity: 0.5;
+        transform: translateX(15px);
+    }
+
+    50%{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    75%{
+        opacity: 0.5;
+        transform: translateX(-15px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+nav>#button>h3:hover, #sec1>#button1>h3:hover{
+    animation: buttonh 0.8s ease-out;
+    
+}
+
+#sec2{
+    background-color: white;
+}
+
+#sec2>h1{
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 1%, transparent 100%);
+    color: rgba(192, 192, 192, 0.234);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size :204px;
+    font-weight :600;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 3%;
+}
+
+#sec2>h2{
+    box-sizing: border-box;
+    color: rgb(22, 35, 43);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 52px;
+    font-weight: 600;
+    height: 35px;
+    letter-spacing: -0.25px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: capitalize;
+    position: relative;
+    top: -14rem;
+}
+
+#sec2>h2::before{
+    content: ' 03 ';
+    color: rgb(237, 80, 12);
+}
+
+#sec2>p{
+    box-sizing: border-box;
+    color: rgba(22, 35, 43, 0.451);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    height: 25px;
+    letter-spacing: -0.25px;
+    line-height: 25px;
+    text-align: center;
+    text-transform: capitalize;
+    position: relative;
+    top: -15rem;
+}
+
+#sec2>div{
+    padding: 1rem;
+    background-color: white;
+}
+
+#sec2>div>img:first-child{
+    
+    position: relative;
+    top: -32rem;
+    width: 45%;
+    left: 4rem;
+
+}
+
+#sec2>div>img:nth-child(2){
+    position: relative;
+    top: -5rem;
+    width: 45%;
+    left: 7rem;
+}
+
+#sec2>div>img:last-child{
+    position: relative;
+    top: -28rem;
+    width: 45%;
+    left: 4rem;
+}
+
+#sec1>h1, #sec1>h2, #sec1>#button1{
+    animation: uppertext forwards .6s ease-in-out;
+}
+
+@keyframes uppertext {
+    from{
+        transform: translateY(200px);
+        opacity: 0;
+        
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#sec2>h1, #sec2>h2, #sec2>p{
+    animation: uppertext forwards .6s ease-in-out;
+    animation-timeline: view(axis inset);
+}
 
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
