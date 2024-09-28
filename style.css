@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    /* *{
+        margin: 0;
+    } */
+    footer{
+        box-sizing: border-box;
+        position: relative;
+    }
+    .sliders-container img{
+        height: 350px;
+    }
+    .main-temp{
+        height: 40em;
+        position: relative;
+        width: auto;
+        font-family: 'Roboto';
+    }
+    .footer-text{
+        height: 100%;
+        background-color: rgba(2, 3, 3, 0.5);
+        position: absolute;
+        z-index: 1000;
+        color: aliceblue;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        text-align: center;
+        
+    }
+    .footer-text  p{
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 3em;
+    }
+    .footer-text .hero-text{
+        font-size: 2.7em;
+        line-height: 1em;
+    }
+    .footer-text a{
+        text-decoration: none;
+        margin-top: 1em;
+        background-color: rgb(255, 94, 20);
+        color: white;
+        font-size: 1em;
+        text-align: center;
+        line-height: 3;
+        padding :0 1em;
+        
+    }
+    .footer-text .orange-text{
+        color: rgb(255, 94, 20) ;
+    }
+    
+    /* footer slider starts here */
+    .sliders-container{
+        /* border: 1px solid red; */
+        position: absolute;
+        top: 0%;
+        box-sizing: border-box;
+        width: 100%;
+        height:40em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgb(42, 59, 78);
+        gap: 1em;
+        overflow: hidden;
+
+    }
+    @keyframes slide {
+from{
+    transform: translateY(0);
+}
+to{
+    transform: translateY(-100%);
+}  
+}
+@keyframes slide-upward {
+from{
+    transform: translateY(-100%);
+}
+to{
+    transform: translateY(0%);
+}
+
+
+}
+    /* {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid black;
+    } */
+    .slider-second, .slider-first{
+        width: 26%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    .slider-1, .slider-2{
+        width: 230px;
+        display:flex;
+        flex-direction: column;
+    }
+    .slider-1{
+        animation: slide 15s infinite linear;
+    }
+     .slider-2{
+        animation: slide-upward 15s infinite linear;
+
+    }
+
+    /* footbar stats here */
+    .footbar{
+        height: 3.5em;
+        display: flex;
+        font-family: 'roboto';
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(23, 35, 48);
+    }
+    .foot-para p{
+        color: aliceblue;
+        font-size: 1.1em;
+    }
+    .foot-para span{
+        color:rgb(255, 94, 20) ;
+    }
+    .foot-list ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        
+    }
+    .foot-list ul li{
+        padding: .5em 1em ;
+        text-align: center;
+    }
+    .foot-list ul a{
+        text-decoration: none;
+        color: rgb(207, 207, 207);
+    }
+    .animate {
+opacity: 0;
+transform: translateY(50px);
+transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* State when elements are in the viewport */
+.animate.show {
+opacity: 1;
+transform: translateY(0);
+}
+
+
+/* feature start here */
+.features{
+height: 100vh;
+width: 100%;
+box-sizing: border-box;
+}
+
+
